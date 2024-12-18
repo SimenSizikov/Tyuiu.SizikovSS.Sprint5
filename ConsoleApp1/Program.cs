@@ -6,10 +6,19 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string outputFile = @"C:\Users\simen\source\repos\Tyuiu.SizikovSS.Sprint5\OutPutFileTask0.txt";
-            double x8 = 1;
-            double result8 = 4 * Math.Pow(x8, 3) - 5 * Math.Pow(x8, 2) + 6 * x8 - 7;
-            File.AppendAllText(outputFile, result8.ToString());
+            double start = 1, end = 3, step = 1;
+            string outputFile = @"C:\\Users\\simen\\source\\repos\\Tyuiu.SizikovSS.Sprint5\OutPutFileTask1.txt";
+            for (double x = start; x <= end; x += step)
+            {
+                double result = 5 * x - 3 * Math.Pow(x, 2) - 7;
+                if (double.IsInfinity(result) || double.IsNaN(result))
+                {
+                    result = 0;
+                }
+                result = Math.Round(result, 2);
+                File.AppendAllText(outputFile, $"{result}\n");
+                Console.WriteLine($"{result}");
+            }
         }
     }
 }
