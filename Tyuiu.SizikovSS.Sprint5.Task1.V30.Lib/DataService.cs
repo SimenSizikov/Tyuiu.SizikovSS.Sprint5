@@ -13,7 +13,7 @@ namespace Tyuiu.SizikovSS.Sprint5.Task1.V30.Lib
 
             FileInfo fileInfo = new(path);
             bool fileExists = fileInfo.Exists;
-
+            
             if (fileExists) File.Delete(path);
 
             for (int x = startValue; x <= stopValue; x++)
