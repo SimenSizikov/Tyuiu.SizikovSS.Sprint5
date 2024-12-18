@@ -27,22 +27,28 @@ namespace Tyuiu.SizikovSS.Sprint5.Task1.V30
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            int start = -5, stop = 5;
+            int start, stop;
+
+            do
+            {
+                Console.Write("Введите начальное значение: ");
+                start = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите конечное значение: ");
+                stop = Convert.ToInt32(Console.ReadLine());
+
+                if (start > stop) Console.WriteLine("Начальное значение не может быть больше конечного, попробуйте ещё раз.");
+            } while (start > stop);
 
             string path = ds.SaveToFileTextData(start,stop);
 
-            Console.WriteLine("* Введите начало диапазона: ");
-            start = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("* Введите конец диапазона: ");
-            stop = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
             Console.WriteLine("Ответ записан в файл по пути:\n" + path);
-            Console.WriteLine("Значение выражения: " + File.ReadAllText(path));
+            Console.WriteLine("Значение выражения: \n" + File.ReadAllText(path));
 
             Console.WriteLine("***************************************************************************");
             Console.ReadLine();

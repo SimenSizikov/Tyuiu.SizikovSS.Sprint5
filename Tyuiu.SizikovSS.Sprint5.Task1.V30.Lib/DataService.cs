@@ -15,7 +15,7 @@ namespace Tyuiu.SizikovSS.Sprint5.Task1.V30.Lib
             double y;
             for (int x = startValue; x <= stopValue; x++)
             {
-                if (x == 0)
+                if (2 - 2*x == 0)
                 {
                     File.WriteAllText(path, Convert.ToString(0) + "\n");
                     mass[k] = 0;
