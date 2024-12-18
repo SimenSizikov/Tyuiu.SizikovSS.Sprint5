@@ -1,4 +1,4 @@
-﻿using Tyuiu.SizikovSS.Sprint5.Task1.V30.Lib;partial;
+﻿using Tyuiu.SizikovSS.Sprint5.Task1.V30.Lib;
 
 namespace Tyuiu.SizikovSS.Sprint5.Task1.V30.Test
 {
