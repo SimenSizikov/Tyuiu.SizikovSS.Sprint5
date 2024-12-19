@@ -14,7 +14,7 @@ namespace Tyuiu.SizikovSS.Sprint5.Task3.V6.Lib
 
             FileInfo fileInfo = new(path);
             bool fileExists = fileInfo.Exists;
-            if (fileExists) File.Delete(path);
+            if (fileExists) File.Delete(path);//
 
             double y = Math.Round( x/Math.Sqrt(Math.Pow(x,2)+x) , 3);
 
