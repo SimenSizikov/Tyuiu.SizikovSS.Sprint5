@@ -6,13 +6,13 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int[,] array = {{-5 , 7 ,-4}, {10,-12,-4}, { 14, 8, 3}};
-            int rowSum = 0;
-            for (int j = 0; j < array.GetLength(1); j++)
+            string outputFile = @"C:\Users\simen\source\repos\Tyuiu.SizikovSS.Sprint5\OutPutFileTask3.bin";
+            double x10 = 5;
+            double result10 = Math.Pow(x10, 4) - 4 * Math.Pow(x10, 3) + 6 * Math.Pow(x10, 2) - 8 * x10 + 10;
+            using (BinaryWriter writer = new BinaryWriter(File.Open(outputFile, FileMode.Append)))
             {
-                rowSum += array[1, j];
+                writer.Write(result10);
             }
-            File.WriteAllText(@"C:\Users\simen\source\repos\Tyuiu.SizikovSS.Sprint5\OutPutFileTask2.csv", rowSum.ToString());
         }
     }
 }
